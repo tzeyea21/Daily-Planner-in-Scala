@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.TasksOverviewController">
+    <children>
+        <SplitPane dividerPositions="0.3377926421404682" layoutX="281.0" layoutY="120.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane prefHeight="398.0" prefWidth="387.0">
+                    <children>
+                        <TableView fx:id="tasksTable" layoutX="49.0" layoutY="82.0" prefHeight="398.0" prefWidth="145.0" style="-fx-background-color: rgb(251, 240, 238);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="toDoTasksColumn" prefWidth="104.0" style="-fx-background-color: rgb(236, 201, 207);" text="To-Do-Tasks" />
+                                <TableColumn fx:id="statusColumn" prefWidth="92.0" style="-fx-background-color: rgb(236, 201, 207);" text="Status" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane maxWidth="564.0" prefHeight="398.0" prefWidth="190.0" style="-fx-background-color: rgb(251, 240, 238);">
+                    <children>
+                        <Label layoutX="22.0" layoutY="22.0" text="Task Details" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="12.0">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                        <GridPane layoutX="43.0" layoutY="120.0" prefWidth="317.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="55.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="128.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="232.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Task:" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                                <Label text="Description:" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                                <Label text="Status:" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                                <Label fx:id="taskLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                                <Label fx:id="descriptionLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                                <Label fx:id="statusLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="Date:">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dateLabel" text="Label" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </GridPane>
+                  <HBox layoutX="30.0" layoutY="347.0" prefHeight="37.0" prefWidth="332.0" spacing="10.0" AnchorPane.bottomAnchor="10.0">
+                     <children>
+                         <Button mnemonicParsing="false" onAction="#handleHomePage" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: rgb(239, 196, 206);" text="Home" textFill="#511a23">
+                           <font>
+                              <Font name="Gill Sans MT" size="18.0" />
+                           </font>
+                        </Button>
+                         <Button mnemonicParsing="false" onAction="#handleNewTask" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: rgb(239, 196, 206);" text="Create" textFill="#511a23">
+                           <font>
+                              <Font name="Gill Sans MT" size="18.0" />
+                           </font>
+                        </Button>
+                         <Button mnemonicParsing="false" onAction="#handleEditTask" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: rgb(239, 196, 206);" text="Edit" textFill="#511a23">
+                           <font>
+                              <Font name="Gill Sans MT" size="18.0" />
+                           </font>
+                        </Button>
+                         <Button mnemonicParsing="false" onAction="#handleDeleteTask" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: rgb(239, 196, 206);" text="Delete" textFill="#511a23">
+                           <font>
+                              <Font name="Gill Sans MT" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

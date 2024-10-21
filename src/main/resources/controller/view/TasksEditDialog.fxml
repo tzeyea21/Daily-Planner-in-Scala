@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="480.0" style="-fx-background-color: rgb(251, 240, 238);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.TasksEditDialogController">
+   <children>
+      <GridPane layoutX="200.0" layoutY="155.0" vgap="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="189.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="391.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Date" textFill="#511a23">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font></Label>
+            <Label text="Task" textFill="#511a23" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font></Label>
+            <Label text="Description" textFill="#511a23" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font></Label>
+            <TextField fx:id="descriptionField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="taskField" prefHeight="31.0" prefWidth="414.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="statusField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Status" textFill="#511a23" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font></Label>
+            <TextField fx:id="dateField" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="292.0" layoutY="246.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#handleCreate" style="-fx-background-color: rgb(239, 196, 206);" text="Create">
+               <font>
+                  <Font name="Gill Sans MT" size="18.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#handleCancel" style="-fx-background-color: rgb(239, 196, 206);" text="Cancel">
+               <font>
+                  <Font name="Gill Sans MT" size="18.0" />
+               </font></Button>
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-position: center; -fx-border-image-repeat: no-repeat; -fx-background-size: contain;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.view.WelcomeController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="706.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-180.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-106.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../images/HomePageBackground.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#902e22" layoutX="85.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start and End Your Day Here!" textAlignment="CENTER" wrappingWidth="430.31103515625">
+         <font>
+            <Font name="Gill Sans MT" size="64.0" />
+         </font>
+      </Text>
+      <HBox layoutX="88.0" layoutY="261.0" prefHeight="100.0" prefWidth="430.0" spacing="40.0">
+         <children>
+            <Button alignment="CENTER" lineSpacing="80.0" minWidth="41.0" mnemonicParsing="false" onAction="#getStartedToWriteTask" prefHeight="50.0" prefWidth="193.0" style="-fx-background-color: rgb(239, 196, 206);" text="Start the Day" textFill="#511a23">
+               <font>
+                  <Font name="Gill Sans MT" size="24.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#getStartedToWriteDiary" prefHeight="50.0" prefWidth="193.0" style="-fx-background-color: rgb(239, 196, 206);" text="End the Day" textFill="#501a23">
+               <font>
+                  <Font name="Gill Sans MT" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
